@@ -7,12 +7,10 @@ import 'package:flutter/services.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
-
     SystemChrome.setPreferredOrientations([
-        DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitUp,
     ]);
 
     return MaterialApp(
@@ -29,10 +27,12 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-
-  void initState(){
+  void initState() {
     super.initState();
-    Timer(Duration(seconds: 5), () => Navigator.push(context, MaterialPageRoute(builder: (context)=> HomePage())));
+    Timer(
+        Duration(seconds: 5),
+        () => Navigator.push(
+            context, MaterialPageRoute(builder: (context) => HomePage())));
   }
 
   @override
@@ -42,9 +42,7 @@ class _SplashScreenState extends State<SplashScreen> {
         fit: StackFit.expand,
         children: <Widget>[
           Container(
-            decoration: BoxDecoration(
-              color: ColorsValues.primaryColor
-            ),
+            decoration: BoxDecoration(color: ColorsValues.primaryColor),
           ),
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -60,13 +58,11 @@ class _SplashScreenState extends State<SplashScreen> {
                         radius: 50.0,
                         backgroundColor: ColorsValues.primaryColor,
                         child: Image.asset(
-                        "assets/icons/viruses.png",
-                        color: ColorsValues.whiteColor,
+                          "assets/icons/viruses.png",
+                          color: ColorsValues.whiteColor,
+                        ),
                       ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(top: 10.0)
-                      ),
+                      Padding(padding: EdgeInsets.only(top: 10.0)),
                       Text(
                         "CoronaTracker",
                         style: TextStyle(
@@ -84,7 +80,9 @@ class _SplashScreenState extends State<SplashScreen> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    CircularProgressIndicator(),
+                    CircularProgressIndicator(
+                      color: ColorsValues.whiteColor,
+                    ),
                     Padding(
                       padding: EdgeInsets.only(top: 10.0),
                     ),

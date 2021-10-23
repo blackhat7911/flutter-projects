@@ -43,7 +43,7 @@ class _HomePageState extends State<HomePage> {
               itemBuilder: (context){
                 return [
                   PopupMenuItem(
-                    child: FlatButton(
+                    child: TextButton(
                       child: Text("Exit"),
                       onPressed: (){
                         exit(0);

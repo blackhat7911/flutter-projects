@@ -16,7 +16,6 @@ class _CaseDetailsState extends State<CaseDetails> {
 
    @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     _future = getData();
   }
